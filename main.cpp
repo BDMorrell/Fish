@@ -39,7 +39,7 @@ public:
 		delete[] allFish;
 	}
 	void repopulate() { //return all fish to the pond
-		pond.clear(); //to remove and possible duplicates
+		pond.clear(); //to remove any possible duplicates
 		int i;
 		for (i = 0; i < totalFish; i++)
 			pond.push_front(allFish[i]);
