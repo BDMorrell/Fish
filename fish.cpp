@@ -51,6 +51,17 @@ private:
 	int totalFish; //so we can delete the fish when we are done
 };
 
+/*
+TODO:
+Run the simulation (peudo code below):
+funciton test():
+	while (havn't reun through all the fish)
+		take next fish
+		if (!done) //Dan or all trout died
+			test()
+		else
+			report results
+*/
 int main()
 {
 	int fishType[] {5, 9, 1}; //trout catfish Dan
