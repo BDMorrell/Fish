@@ -59,7 +59,8 @@ public:
 		size = pond.size(); //remove?
 		for (i = 0; i < size; i++) {
 			it = pond.begin(); //throw out iterator just to be safe; remove?
-			advance(it, i); //get element i (iterator to be thrown out every run)
+//ADVANCE DOESN"T SEEM TO WORK!!!
+////////////////////////advance(it, i); //get element i (iterator to be thrown out every run)
 			myFish = *it; // or just "it" (no pointer*)?
 			pond.erase(it); // *pluck*
 			if ((j = isSimulationFinished())) //if finished
@@ -67,7 +68,8 @@ public:
 			else
 				runSimulation(); //loop again, the fish is still out
 			it = pond.begin();
-			advance(it, i);
+//ADVANCE DOESN'T SEEM TO WORK!!!
+////////////////////////advance(it, i);
 			pond.insert(it, myFish); //put the fish back
 		}
 	}
