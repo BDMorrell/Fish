@@ -59,7 +59,6 @@ public:
 		size = pond.size(); //remove?
 		for (i = 0; i < size; i++) {
 			it = pond.begin(); //throw out iterator just to be safe; remove?
-<<<<<<< HEAD
 			advance(it, i); //get element i (iterator to be thrown out every run)
 			myFish = *it; // or just "it" (no pointer*)?
 			pond.erase(it); // *pluck*
@@ -69,19 +68,6 @@ public:
 				runSimulation(); //loop again, the fish is still out
 			it = pond.begin();
 			advance(it, i);
-=======
-//ADVANCE DOESN"T SEEM TO WORK!!!
-////////////////////////advance(it, i); //get element i (iterator to be thrown out every run)
-			myFish = *it; // or just "it" (no pointer*)?
-			pond.erase(it); // *pluck*
-			if ((j = isSimulationFinished())) //if finished
-				reportDeath(myFish->type);
-			else
-				runSimulation(); //loop again, the fish is still out
-			it = pond.begin();
-//ADVANCE DOESN'T SEEM TO WORK!!!
-////////////////////////advance(it, i);
->>>>>>> 80afb946fa42f61a90bba3d19e56090fa7497e4b
 			pond.insert(it, myFish); //put the fish back
 		}
 	}
@@ -152,7 +138,6 @@ private:
 	int *importantFishDeaths; //who died
 };
 
-<<<<<<< HEAD
 int atoi(char* str) {
 	int ret = 0;
 	int i;
@@ -260,35 +245,11 @@ input code in the future.
 			if (importantFishTypes[j] == i)
 				break; //inner loop
 		if (j != importantFishNumber)
-=======
-int main()
-{
-	int fishType[] = {2, 2, 1}; //trout catfish Dan
-	char *fishNames[(sizeof(fishType)/sizeof(int))];
-	fishNames[0] = "Trout";
-	fishNames[1] = "Catfish";
-	fishNames[2] = "Dan";
-	int importantFishTypes[] = {0, 2}; //trout and Dan; when one dies, the simulation is done (ending conditions)
-	simData simulation((int)(sizeof(fishType)/sizeof(int)), fishType, (int)(sizeof(importantFishTypes)/sizeof(int)), importantFishTypes); //update the lines above to change the arrays
-	simulation.runSimulation();
-	cout << simulation.simulationCycles << endl;
-	int i, j;
-	for (i = 0; i < (int)(sizeof(importantFishTypes)/sizeof(int)); i++)
-		cout << fishNames[importantFishTypes[i]] << " have died " << simulation.getImportantFishDeaths()[i] << " times.\n";
-	for (i = 0; i < (int)(sizeof(fishType)/sizeof(int)); i++) {
-		for (j = 0; j < (int)(sizeof(importantFishTypes)/sizeof(int)); j++)
-			if (importantFishTypes[j] == i)
-				break; //inner loop
-		if (j != sizeof(importantFishTypes)/sizeof(int))
->>>>>>> 80afb946fa42f61a90bba3d19e56090fa7497e4b
 			continue; //outer loop
 		//else
 		cout << fishNames[i] << " were not counted, as they aren't an ending condition.\n";
 	}
-<<<<<<< HEAD
 
 	//for (i = 0; i < fishTypeNumber; i++) delete[] fishNames[i];
-=======
->>>>>>> 80afb946fa42f61a90bba3d19e56090fa7497e4b
 	return 0;
 }
