@@ -1,4 +1,4 @@
-#Fish
+# Fish
 A simulator for a math question that bugged me for quite a while.
 The question is this (slightly altered):
 
@@ -11,7 +11,7 @@ Though after I found the solution, I was still working on this for experience...
 (That's about the main thing I've been doing on GitHub.)
 The `fish` and `simData` are the base classes that run the brute force simulation.
 
-###Logical Solution
+## Logical Solution
 A note:
 One of the first things I noticed when I was programming this project, was there are three kinds of fish.
 (The types are listed below.)
